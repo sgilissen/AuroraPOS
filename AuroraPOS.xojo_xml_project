@@ -1309,7 +1309,7 @@
    <SourceLine></SourceLine>
    <SourceLine></SourceLine>
    <SourceLine>Else</SourceLine>
-   <SourceLine>Dim MyWindowMessageBox As New wndMessageBox("Toegang geweigerd", "De gebruikte badge is niet gekend in het systeem.", 1, 0)</SourceLine>
+   <SourceLine>Dim MyWindowMessageBox As New wndMessageBox(LocalizationStrings.kAccessDenied, LocalizationStrings.kBadgeUnknown, 1, 0)</SourceLine>
    <SourceLine>doLogoutUser</SourceLine>
    <SourceLine></SourceLine>
    <SourceLine>MyWindowMessageBox.ShowModal</SourceLine>
@@ -1319,7 +1319,7 @@
    <SourceLine></SourceLine>
    <SourceLine>Else</SourceLine>
    <SourceLine></SourceLine>
-   <SourceLine>Dim MyWindowMessageBox As New wndMessageBox("Toegang geweigerd", "De gebruikte badge is niet gekend in het systeem.", 1, 0)</SourceLine>
+   <SourceLine>Dim MyWindowMessageBox As New wndMessageBox(LocalizationStrings.kAccessDenied, LocalizationStrings.kBadgeUnknown, 1, 0)</SourceLine>
    <SourceLine>doLogoutUser</SourceLine>
    <SourceLine></SourceLine>
    <SourceLine>MyWindowMessageBox.ShowModal</SourceLine>
@@ -1993,7 +1993,7 @@
     <SourceLine>// Title As String, Message As String, MessageType As Integer, Buttons As Integer</SourceLine>
     <SourceLine>if lbBill.ListCount &gt;=1 Then</SourceLine>
     <SourceLine></SourceLine>
-    <SourceLine>Dim MyWindowMessageBox As New wndMessageBox("Bent u zeker dat u wilt afmelden?", "De huidige rekening word hierdoor gewist! ", 1, 4)</SourceLine>
+    <SourceLine>Dim MyWindowMessageBox As New wndMessageBox(LocalizationStrings.kQLogout, LocalizationStrings.kBillWillBeCleared, 1, 4)</SourceLine>
     <SourceLine></SourceLine>
     <SourceLine>MyWindowMessageBox.ShowModal</SourceLine>
     <SourceLine></SourceLine>
@@ -2356,10 +2356,10 @@
     <TextEncoding>134217984</TextEncoding>
     <SourceLine>Function CellBackgroundPaint(g As Graphics, row As Integer, column As Integer) As Boolean</SourceLine>
     <SourceLine>if me.Selected(row) = True Then</SourceLine>
-    <SourceLine>g.ForeColor = RGB(60,60,60)</SourceLine>
+    <SourceLine>g.ForeColor = RGB(0,75,120)</SourceLine>
     <SourceLine></SourceLine>
     <SourceLine>Else</SourceLine>
-    <SourceLine>g.ForeColor = RGB(120,120,120)</SourceLine>
+    <SourceLine>g.ForeColor = RGB(34,34,38)</SourceLine>
     <SourceLine></SourceLine>
     <SourceLine>End IF</SourceLine>
     <SourceLine></SourceLine>
@@ -2416,10 +2416,10 @@
     <TextEncoding>134217984</TextEncoding>
     <SourceLine>Function CellBackgroundPaint(g As Graphics, row As Integer, column As Integer) As Boolean</SourceLine>
     <SourceLine>if me.Selected(row) = True Then</SourceLine>
-    <SourceLine>g.ForeColor = RGB(60,60,60)</SourceLine>
+    <SourceLine>g.ForeColor = RGB(0,75,120)</SourceLine>
     <SourceLine></SourceLine>
     <SourceLine>Else</SourceLine>
-    <SourceLine>g.ForeColor = RGB(120,120,120)</SourceLine>
+    <SourceLine>g.ForeColor = RGB(34,34,38)</SourceLine>
     <SourceLine></SourceLine>
     <SourceLine>End IF</SourceLine>
     <SourceLine></SourceLine>
@@ -2523,7 +2523,7 @@
     <TextEncoding>134217984</TextEncoding>
     <SourceLine>Sub Action()</SourceLine>
     <SourceLine>// Title As String, Message As String, MessageType As Integer, Buttons As Integer</SourceLine>
-    <SourceLine>Dim MyWindowMessageBox As New wndMessageBox("Volledige rekening wissen?", "Dit kan niet ongedaan gemaakt worden!", 1, 4)</SourceLine>
+    <SourceLine>Dim MyWindowMessageBox As New wndMessageBox(LocalizationStrings.kQClearBill, LocalizationStrings.kCannotBeUndone, 1, 4)</SourceLine>
     <SourceLine></SourceLine>
     <SourceLine>MyWindowMessageBox.ShowModal</SourceLine>
     <SourceLine></SourceLine>
@@ -4553,7 +4553,7 @@
    <SourceLine>dim bx, by, bw, bh as Integer</SourceLine>
    <SourceLine>dim ButtonNameText as String</SourceLine>
    <SourceLine></SourceLine>
-   <SourceLine>g.ForeColor = rgb(120,120,120)</SourceLine>
+   <SourceLine>g.ForeColor = rgb(34,34,38)</SourceLine>
    <SourceLine>g.FillRect(0, 0, me.Width, me.Height)</SourceLine>
    <SourceLine></SourceLine>
    <SourceLine></SourceLine>
@@ -11723,7 +11723,7 @@
   <PropertyVal Name="TabPanelIndex">0</PropertyVal>
   <PropertyVal Name="TabStop">True</PropertyVal>
   <PropertyVal Name="Text">Artikelnaam:</PropertyVal>
-  <PropertyVal Name="TextAlignment"></PropertyVal>
+  <PropertyVal Name="TextAlignment">0</PropertyVal>
   <PropertyVal Name="TextColor">0</PropertyVal>
   <PropertyVal Name="Tooltip"></PropertyVal>
   <PropertyVal Name="Top">71</PropertyVal>
@@ -11744,8 +11744,6 @@
   <PropertyVal Name="AllowTabs">False</PropertyVal>
   <PropertyVal Name="BackgroundColor">16777215</PropertyVal>
   <PropertyVal Name="Bold">False</PropertyVal>
-  <PropertyVal Name="DataField"></PropertyVal>
-  <PropertyVal Name="DataSource"></PropertyVal>
   <PropertyVal Name="Enabled">True</PropertyVal>
   <PropertyVal Name="FontName">System</PropertyVal>
   <PropertyVal Name="FontSize">0.0</PropertyVal>
@@ -11851,7 +11849,7 @@
   <PropertyVal Name="TabPanelIndex">0</PropertyVal>
   <PropertyVal Name="TabStop">True</PropertyVal>
   <PropertyVal Name="Text">BTW:</PropertyVal>
-  <PropertyVal Name="TextAlignment"></PropertyVal>
+  <PropertyVal Name="TextAlignment">0</PropertyVal>
   <PropertyVal Name="TextColor">0</PropertyVal>
   <PropertyVal Name="Tooltip"></PropertyVal>
   <PropertyVal Name="Top">139</PropertyVal>
@@ -11868,8 +11866,6 @@
   <ItemName>PopupMenu</ItemName>
   <PropertyVal Name="AllowAutoDeactivate">True</PropertyVal>
   <PropertyVal Name="Bold">False</PropertyVal>
-  <PropertyVal Name="DataField"></PropertyVal>
-  <PropertyVal Name="DataSource"></PropertyVal>
   <PropertyVal Name="Enabled">True</PropertyVal>
   <PropertyVal Name="FontName">System</PropertyVal>
   <PropertyVal Name="FontSize">0.0</PropertyVal>
@@ -11910,8 +11906,6 @@
   <PropertyVal Name="AllowTabs">False</PropertyVal>
   <PropertyVal Name="BackgroundColor">16777215</PropertyVal>
   <PropertyVal Name="Bold">False</PropertyVal>
-  <PropertyVal Name="DataField"></PropertyVal>
-  <PropertyVal Name="DataSource"></PropertyVal>
   <PropertyVal Name="Enabled">True</PropertyVal>
   <PropertyVal Name="FontName">System</PropertyVal>
   <PropertyVal Name="FontSize">0.0</PropertyVal>
@@ -11979,7 +11973,7 @@
   <PropertyVal Name="TabPanelIndex">0</PropertyVal>
   <PropertyVal Name="TabStop">True</PropertyVal>
   <PropertyVal Name="Text">Prijs (incl. BTW):</PropertyVal>
-  <PropertyVal Name="TextAlignment"></PropertyVal>
+  <PropertyVal Name="TextAlignment">0</PropertyVal>
   <PropertyVal Name="TextColor">0</PropertyVal>
   <PropertyVal Name="Tooltip"></PropertyVal>
   <PropertyVal Name="Top">106</PropertyVal>
@@ -12020,7 +12014,7 @@
   <PropertyVal Name="TabPanelIndex">0</PropertyVal>
   <PropertyVal Name="TabStop">True</PropertyVal>
   <PropertyVal Name="Text">€</PropertyVal>
-  <PropertyVal Name="TextAlignment"></PropertyVal>
+  <PropertyVal Name="TextAlignment">0</PropertyVal>
   <PropertyVal Name="TextColor">0</PropertyVal>
   <PropertyVal Name="Tooltip"></PropertyVal>
   <PropertyVal Name="Top">106</PropertyVal>
@@ -12053,7 +12047,6 @@
   <PropertyVal Name="Super">Rectangle</PropertyVal>
   <PropertyVal Name="TabIndex">14</PropertyVal>
   <PropertyVal Name="TabPanelIndex">0</PropertyVal>
-  <PropertyVal Name="TabStop">True</PropertyVal>
   <PropertyVal Name="Tooltip"></PropertyVal>
   <PropertyVal Name="Top">14</PropertyVal>
   <PropertyVal Name="TopLeftColor">0</PropertyVal>
@@ -15567,6 +15560,27 @@
  </ControlBehavior>
  <ControlBehavior>
   <Superclass>Listbox</Superclass>
+  <HookInstance>
+   <ItemName>CellBackgroundPaint</ItemName>
+   <Compatibility></Compatibility>
+   <Visible>1</Visible>
+   <PartID>1390721023</PartID>
+   <ItemSource>
+    <TextEncoding>134217984</TextEncoding>
+    <SourceLine>Function CellBackgroundPaint(g As Graphics, row As Integer, column As Integer) As Boolean</SourceLine>
+    <SourceLine>if me.Selected(row) = True Then</SourceLine>
+    <SourceLine>g.ForeColor = RGB(0,75,120)</SourceLine>
+    <SourceLine></SourceLine>
+    <SourceLine>Else</SourceLine>
+    <SourceLine>g.ForeColor = RGB(34,34,38)</SourceLine>
+    <SourceLine></SourceLine>
+    <SourceLine>End IF</SourceLine>
+    <SourceLine></SourceLine>
+    <SourceLine>g.FillRect 0,0,g.Width,g.Height</SourceLine>
+    <SourceLine>Return True</SourceLine>
+    <SourceLine>End Function</SourceLine>
+   </ItemSource>
+  </HookInstance>
  </ControlBehavior>
  <ControlBehavior>
   <Superclass>Listbox</Superclass>
@@ -15579,10 +15593,10 @@
     <TextEncoding>134217984</TextEncoding>
     <SourceLine>Function CellBackgroundPaint(g As Graphics, row As Integer, column As Integer) As Boolean</SourceLine>
     <SourceLine>if me.Selected(row) = True Then</SourceLine>
-    <SourceLine>g.ForeColor = RGB(60,60,60)</SourceLine>
+    <SourceLine>g.ForeColor = RGB(0,75,120)</SourceLine>
     <SourceLine></SourceLine>
     <SourceLine>Else</SourceLine>
-    <SourceLine>g.ForeColor = RGB(120,120,120)</SourceLine>
+    <SourceLine>g.ForeColor = RGB(34,34,38)</SourceLine>
     <SourceLine></SourceLine>
     <SourceLine>End IF</SourceLine>
     <SourceLine></SourceLine>
@@ -15624,7 +15638,7 @@
     <TextEncoding>134217984</TextEncoding>
     <SourceLine>Sub Change()</SourceLine>
     <SourceLine>UpdateSalesList</SourceLine>
-    <SourceLine>lblDate.Text = "Openstaande rekening sinds " + lbTickets.Cell(lbTickets.ListIndex, 0)</SourceLine>
+    <SourceLine>lblDate.Text = LocalizationStrings.kOpenTabSince + " " + lbTickets.Cell(lbTickets.ListIndex, 0)</SourceLine>
     <SourceLine>tfName.Text = lbTickets.Cell(lbTickets.ListIndex, 1)</SourceLine>
     <SourceLine></SourceLine>
     <SourceLine>// ASDMDName.</SourceLine>
@@ -15700,7 +15714,7 @@
     <SourceLine></SourceLine>
     <SourceLine></SourceLine>
     <SourceLine>If wndPOS.lbBill.ListCount &lt; 1 Then</SourceLine>
-    <SourceLine>dim MyMsgBox As New wndMessageBox("Geen artikelen", "U heeft geen artikelen aangeduid.", 0, 0)</SourceLine>
+    <SourceLine>dim MyMsgBox As New wndMessageBox(LocalizationStrings.kNoItems, LocalizationStrings.kDidNotSpecifyItems, 0, 0)</SourceLine>
     <SourceLine></SourceLine>
     <SourceLine>Else</SourceLine>
     <SourceLine></SourceLine>
@@ -15713,6 +15727,7 @@
     <SourceLine>BillID = format(d.Year, "0000") + format(d.Month, "00") + format(d.Day, "00") + format(D.Hour, "00") + format(d.Minute, "00") + Format(d.Second, "00")</SourceLine>
     <SourceLine></SourceLine>
     <SourceLine>if tfName.Text &lt;&gt; "" Then</SourceLine>
+    <SourceLine>App.TicketDB.BeginTransaction</SourceLine>
     <SourceLine>//"CREATE TABLE pos_sales (id Integer PRIMARY KEY AUTOINCREMENT, billid Integer,  article VarChar, amount Integer, price Double, total Double,  timestamp VarChar, day VarChar, month VarChar, year VarCh, paymentmethod VarChar, invoice VarChar)"</SourceLine>
     <SourceLine>For x As Integer = 0 to wndPOS.lbBill.ListCount -1</SourceLine>
     <SourceLine>row.Column("billid") = BillID</SourceLine>
@@ -15739,7 +15754,7 @@
     <SourceLine></SourceLine>
     <SourceLine>end if</SourceLine>
     <SourceLine>Next</SourceLine>
-    <SourceLine>App.TicketDB.Commit</SourceLine>
+    <SourceLine>App.TicketDB.CommitTransaction</SourceLine>
     <SourceLine></SourceLine>
     <SourceLine>if App.TicketDB.Error then</SourceLine>
     <SourceLine>msgBox("Error: " + App.TicketDB.ErrorMessage)</SourceLine>
@@ -15785,7 +15800,7 @@
     <SourceLine>Sub Action()</SourceLine>
     <SourceLine>If lbTickets.ListIndex &gt;=0 Then</SourceLine>
     <SourceLine></SourceLine>
-    <SourceLine>dim MyMsgBox As New wndMessageBox("Rekening van " + lbTickets.Cell(lbTickets.ListIndex, 1) + " wissen?", "Dit kan niet ongedaan gemaakt worden!", 0, 4)</SourceLine>
+    <SourceLine>dim MyMsgBox As New wndMessageBox(LocalizationStrings.kDeleteTabPre + " " + lbTickets.Cell(lbTickets.ListIndex, 1)  + "'s "  + LocalizationStrings.kDeleteTabPost, LocalizationStrings.kCannotBeUndone, 0, 4)</SourceLine>
     <SourceLine>MyMsgBox.ShowModal</SourceLine>
     <SourceLine></SourceLine>
     <SourceLine>if not MyMsgBox.okPressed Then</SourceLine>
@@ -15865,7 +15880,7 @@
   <PropertyVal Name="TabIndex">0</PropertyVal>
   <PropertyVal Name="TabPanelIndex">0</PropertyVal>
   <PropertyVal Name="TabStop">True</PropertyVal>
-  <PropertyVal Name="Text">Openstaande rekeningen</PropertyVal>
+  <PropertyVal Name="Text">#LocalizationStrings.KOpenTabs</PropertyVal>
   <PropertyVal Name="TextAlignment">0</PropertyVal>
   <PropertyVal Name="TextColor">16777215</PropertyVal>
   <PropertyVal Name="Tooltip"></PropertyVal>
@@ -15943,7 +15958,7 @@
   <PropertyVal Name="TabIndex">15</PropertyVal>
   <PropertyVal Name="TabPanelIndex">0</PropertyVal>
   <PropertyVal Name="TabStop">True</PropertyVal>
-  <PropertyVal Name="Text">Totaal: € 0.00</PropertyVal>
+  <PropertyVal Name="Text">€ 0.00</PropertyVal>
   <PropertyVal Name="TextAlignment">3</PropertyVal>
   <PropertyVal Name="TextColor">16777215</PropertyVal>
   <PropertyVal Name="Tooltip"></PropertyVal>
@@ -15962,7 +15977,7 @@
   <PropertyVal Name="AllowAutoDeactivate">True</PropertyVal>
   <PropertyVal Name="AllowAutoHideScrollbars">True</PropertyVal>
   <PropertyVal Name="AllowExpandableRows">False</PropertyVal>
-  <PropertyVal Name="AllowFocusRing">True</PropertyVal>
+  <PropertyVal Name="AllowFocusRing">False</PropertyVal>
   <PropertyVal Name="AllowResizableColumns">False</PropertyVal>
   <PropertyVal Name="AllowRowDragging">False</PropertyVal>
   <PropertyVal Name="AllowRowReordering">False</PropertyVal>
@@ -15982,7 +15997,7 @@
   <PropertyVal Name="HasHorizontalScrollbar">False</PropertyVal>
   <PropertyVal Name="HasVerticalScrollbar">True</PropertyVal>
   <PropertyVal Name="HeadingIndex">-1</PropertyVal>
-  <PropertyVal Name="Height">304</PropertyVal>
+  <PropertyVal Name="Height">321</PropertyVal>
   <PropertyVal Name="Index">-2147483648</PropertyVal>
   <PropertyVal Name="InitialParent"></PropertyVal>
   <PropertyVal Name="InitialValue"></PropertyVal>
@@ -16001,7 +16016,7 @@
   <PropertyVal Name="TabPanelIndex">0</PropertyVal>
   <PropertyVal Name="TabStop">True</PropertyVal>
   <PropertyVal Name="Tooltip"></PropertyVal>
-  <PropertyVal Name="Top">140</PropertyVal>
+  <PropertyVal Name="Top">123</PropertyVal>
   <PropertyVal Name="Transparent">True</PropertyVal>
   <PropertyVal Name="Underline">False</PropertyVal>
   <PropertyVal Name="Visible">True</PropertyVal>
@@ -16038,7 +16053,7 @@
   <PropertyVal Name="HasHorizontalScrollbar">False</PropertyVal>
   <PropertyVal Name="HasVerticalScrollbar">True</PropertyVal>
   <PropertyVal Name="HeadingIndex">-1</PropertyVal>
-  <PropertyVal Name="Height">355</PropertyVal>
+  <PropertyVal Name="Height">372</PropertyVal>
   <PropertyVal Name="Index">-2147483648</PropertyVal>
   <PropertyVal Name="InitialParent"></PropertyVal>
   <PropertyVal Name="InitialValue"></PropertyVal>
@@ -16057,7 +16072,7 @@
   <PropertyVal Name="TabPanelIndex">0</PropertyVal>
   <PropertyVal Name="TabStop">True</PropertyVal>
   <PropertyVal Name="Tooltip"></PropertyVal>
-  <PropertyVal Name="Top">140</PropertyVal>
+  <PropertyVal Name="Top">123</PropertyVal>
   <PropertyVal Name="Transparent">True</PropertyVal>
   <PropertyVal Name="Underline">False</PropertyVal>
   <PropertyVal Name="Visible">True</PropertyVal>
@@ -16144,7 +16159,7 @@
   <PropertyVal Name="TabIndex">23</PropertyVal>
   <PropertyVal Name="TabPanelIndex">0</PropertyVal>
   <PropertyVal Name="TabStop">True</PropertyVal>
-  <PropertyVal Name="Text">Naam:</PropertyVal>
+  <PropertyVal Name="Text">#LocalizationStrings.KName</PropertyVal>
   <PropertyVal Name="TextAlignment">0</PropertyVal>
   <PropertyVal Name="TextColor">16777215</PropertyVal>
   <PropertyVal Name="Tooltip"></PropertyVal>
@@ -16185,7 +16200,7 @@
   <PropertyVal Name="TabIndex">24</PropertyVal>
   <PropertyVal Name="TabPanelIndex">0</PropertyVal>
   <PropertyVal Name="TabStop">True</PropertyVal>
-  <PropertyVal Name="Text">Selecteer een rekening</PropertyVal>
+  <PropertyVal Name="Text">#LocalizationStrings.kSelectATab</PropertyVal>
   <PropertyVal Name="TextAlignment">0</PropertyVal>
   <PropertyVal Name="TextColor">16777215</PropertyVal>
   <PropertyVal Name="Tooltip"></PropertyVal>
@@ -16193,7 +16208,7 @@
   <PropertyVal Name="Transparent">True</PropertyVal>
   <PropertyVal Name="Underline">False</PropertyVal>
   <PropertyVal Name="Visible">True</PropertyVal>
-  <PropertyVal Name="Width">352</PropertyVal>
+  <PropertyVal Name="Width">492</PropertyVal>
   <ControlIndex>8</ControlIndex>
   <Locked>0</Locked>
   <PartID>1567035391</PartID>
@@ -16206,7 +16221,7 @@
   <PropertyVal Name="AllowFocusRing">False</PropertyVal>
   <PropertyVal Name="AllowTabs">False</PropertyVal>
   <PropertyVal Name="Backdrop">0</PropertyVal>
-  <PropertyVal Name="ButtonCaption">AFREKENEN</PropertyVal>
+  <PropertyVal Name="ButtonCaption">#LocalizationStrings.kBtnCheckout</PropertyVal>
   <PropertyVal Name="ButtonColor">2</PropertyVal>
   <PropertyVal Name="ButtonState"></PropertyVal>
   <PropertyVal Name="CaptionSize">12</PropertyVal>
@@ -16280,7 +16295,7 @@
   <PropertyVal Name="AllowFocusRing">False</PropertyVal>
   <PropertyVal Name="AllowTabs">False</PropertyVal>
   <PropertyVal Name="Backdrop">0</PropertyVal>
-  <PropertyVal Name="ButtonCaption">TOEVOEGEN</PropertyVal>
+  <PropertyVal Name="ButtonCaption">#LocalizationStrings.kBtnAdd</PropertyVal>
   <PropertyVal Name="ButtonColor">3</PropertyVal>
   <PropertyVal Name="ButtonState"></PropertyVal>
   <PropertyVal Name="CaptionSize">12</PropertyVal>
@@ -16317,7 +16332,7 @@
   <PropertyVal Name="AllowFocusRing">False</PropertyVal>
   <PropertyVal Name="AllowTabs">False</PropertyVal>
   <PropertyVal Name="Backdrop">0</PropertyVal>
-  <PropertyVal Name="ButtonCaption">VERWIJDEREN</PropertyVal>
+  <PropertyVal Name="ButtonCaption">#LocalizationStrings.kBtnClear</PropertyVal>
   <PropertyVal Name="ButtonColor">1</PropertyVal>
   <PropertyVal Name="ButtonState"></PropertyVal>
   <PropertyVal Name="CaptionSize">12</PropertyVal>
@@ -16496,8 +16511,8 @@
  <PropertyVal Name="MenuBarVisible">False</PropertyVal>
  <PropertyVal Name="MenuBar">0</PropertyVal>
  <PropertyVal Name="Backdrop">0</PropertyVal>
- <PropertyVal Name="BackgroundColor">16777215</PropertyVal>
- <PropertyVal Name="HasBackgroundColor">False</PropertyVal>
+ <PropertyVal Name="BackgroundColor">2236966</PropertyVal>
+ <PropertyVal Name="HasBackgroundColor">True</PropertyVal>
  <PropertyVal Name="Visible">True</PropertyVal>
  <PropertyVal Name="DefaultLocation">0</PropertyVal>
  <PropertyVal Name="ImplicitInstance">True</PropertyVal>
@@ -16742,7 +16757,8 @@
    <ItemSource>
     <TextEncoding>134217984</TextEncoding>
     <SourceLine>Sub TextChange()</SourceLine>
-    <SourceLine></SourceLine>
+    <SourceLine>asDMD.Caption = me.Text</SourceLine>
+    <SourceLine>asDMD.Refresh</SourceLine>
     <SourceLine>End Sub</SourceLine>
    </ItemSource>
   </HookInstance>
@@ -17209,6 +17225,9 @@
    </ItemSource>
   </HookInstance>
  </ControlBehavior>
+ <ControlBehavior>
+  <Superclass>ASDMDCanvas</Superclass>
+ </ControlBehavior>
  <Control>
   <ControlClass>TextField</ControlClass>
   <ItemName>TextField</ItemName>
@@ -17246,7 +17265,7 @@
   <PropertyVal Name="TextAlignment">0</PropertyVal>
   <PropertyVal Name="TextColor">16777215</PropertyVal>
   <PropertyVal Name="Tooltip"></PropertyVal>
-  <PropertyVal Name="Top">1</PropertyVal>
+  <PropertyVal Name="Top">-116</PropertyVal>
   <PropertyVal Name="Transparent">True</PropertyVal>
   <PropertyVal Name="Underline">False</PropertyVal>
   <PropertyVal Name="ValidationMask"></PropertyVal>
@@ -18300,7 +18319,7 @@
   <PropertyVal Name="AllowFocusRing">False</PropertyVal>
   <PropertyVal Name="AllowTabs">False</PropertyVal>
   <PropertyVal Name="Backdrop">0</PropertyVal>
-  <PropertyVal Name="ButtonCaption">Annuleren</PropertyVal>
+  <PropertyVal Name="ButtonCaption">#LocalizationStrings.kBtnCancel</PropertyVal>
   <PropertyVal Name="ButtonColor">1</PropertyVal>
   <PropertyVal Name="ButtonState"></PropertyVal>
   <PropertyVal Name="CaptionSize">22</PropertyVal>
@@ -18365,6 +18384,40 @@
   <ControlIndex>30</ControlIndex>
   <Locked>0</Locked>
   <PartID>838639615</PartID>
+ </Control>
+ <Control>
+  <ControlClass>ASDMDCanvas</ControlClass>
+  <ItemName>ASDMDCanvas</ItemName>
+  <PropertyVal Name="AllowAutoDeactivate">True</PropertyVal>
+  <PropertyVal Name="AllowFocus">False</PropertyVal>
+  <PropertyVal Name="AllowFocusRing">True</PropertyVal>
+  <PropertyVal Name="AllowTabs">False</PropertyVal>
+  <PropertyVal Name="Backdrop">0</PropertyVal>
+  <PropertyVal Name="Caption"></PropertyVal>
+  <PropertyVal Name="DoubleBuffer">True</PropertyVal>
+  <PropertyVal Name="Enabled">True</PropertyVal>
+  <PropertyVal Name="Height">45</PropertyVal>
+  <PropertyVal Name="Index">-2147483648</PropertyVal>
+  <PropertyVal Name="InitialParent"></PropertyVal>
+  <PropertyVal Name="Left">4</PropertyVal>
+  <PropertyVal Name="LockBottom">False</PropertyVal>
+  <PropertyVal Name="LockLeft">False</PropertyVal>
+  <PropertyVal Name="LockRight">True</PropertyVal>
+  <PropertyVal Name="LockTop">True</PropertyVal>
+  <PropertyVal Name="Name">asDMD</PropertyVal>
+  <PropertyVal Name="Scope">0</PropertyVal>
+  <PropertyVal Name="Super">ASDMDCanvas</PropertyVal>
+  <PropertyVal Name="TabIndex">61</PropertyVal>
+  <PropertyVal Name="TabPanelIndex">0</PropertyVal>
+  <PropertyVal Name="TabStop">True</PropertyVal>
+  <PropertyVal Name="Tooltip"></PropertyVal>
+  <PropertyVal Name="Top">9</PropertyVal>
+  <PropertyVal Name="Transparent">True</PropertyVal>
+  <PropertyVal Name="Visible">True</PropertyVal>
+  <PropertyVal Name="Width">608</PropertyVal>
+  <ControlIndex>31</ControlIndex>
+  <Locked>0</Locked>
+  <PartID>1492015103</PartID>
  </Control>
 </block>
 <block type="Picture" ID="1242560511">
@@ -18652,7 +18705,7 @@
  <PropertyVal Name="HasMaximizeButton">False</PropertyVal>
  <PropertyVal Name="HasCloseButton">False</PropertyVal>
  <PropertyVal Name="Title"></PropertyVal>
- <PropertyVal Name="Type">4</PropertyVal>
+ <PropertyVal Name="Type">0</PropertyVal>
  <PropertyVal Name="MaximumHeight">32000</PropertyVal>
  <PropertyVal Name="MaximumWidth">32000</PropertyVal>
  <PropertyVal Name="MinimumHeight">64</PropertyVal>
@@ -23158,7 +23211,7 @@
     <SourceLine></SourceLine>
     <SourceLine>wndLogin.Close</SourceLine>
     <SourceLine>Else</SourceLine>
-    <SourceLine>Dim MyWindowMessageBox As New wndMessageBox("Toegang geweigerd", "De opgegeven gebruikers-ID is ongeldig", 1, 0)</SourceLine>
+    <SourceLine>Dim MyWindowMessageBox As New wndMessageBox(LocalizationStrings.kAccessDenied, LocalizationStrings.kInvalidUser, 1, 0)</SourceLine>
     <SourceLine></SourceLine>
     <SourceLine>MyWindowMessageBox.ShowModal</SourceLine>
     <SourceLine>wndLogin.Close</SourceLine>
@@ -23167,7 +23220,7 @@
     <SourceLine></SourceLine>
     <SourceLine>Else</SourceLine>
     <SourceLine></SourceLine>
-    <SourceLine>Dim MyWindowMessageBox As New wndMessageBox("Toegang geweigerd", "De opgegeven gebruikers-ID is ongeldig", 1, 0)</SourceLine>
+    <SourceLine>Dim MyWindowMessageBox As New wndMessageBox(LocalizationStrings.kAccessDenied, LocalizationStrings.kInvalidUser, 1, 0)</SourceLine>
     <SourceLine></SourceLine>
     <SourceLine>MyWindowMessageBox.ShowModal</SourceLine>
     <SourceLine>wndLogin.Close</SourceLine>
@@ -23451,7 +23504,7 @@
     <SourceLine></SourceLine>
     <SourceLine>wndLogin.Close</SourceLine>
     <SourceLine>Else</SourceLine>
-    <SourceLine>Dim MyWindowMessageBox As New wndMessageBox("Toegang geweigerd", "De opgegeven gebruikers-ID is ongeldig", 1, 0)</SourceLine>
+    <SourceLine>Dim MyWindowMessageBox As New wndMessageBox(LocalizationStrings.kAccessDenied, LocalizationStrings.kInvalidUser, 1, 0)</SourceLine>
     <SourceLine></SourceLine>
     <SourceLine>MyWindowMessageBox.ShowModal</SourceLine>
     <SourceLine>wndLogin.Close</SourceLine>
@@ -23460,7 +23513,7 @@
     <SourceLine></SourceLine>
     <SourceLine>Else</SourceLine>
     <SourceLine></SourceLine>
-    <SourceLine>Dim MyWindowMessageBox As New wndMessageBox("Toegang geweigerd", "De opgegeven gebruikers-ID is ongeldig", 1, 0)</SourceLine>
+    <SourceLine>Dim MyWindowMessageBox As New wndMessageBox(LocalizationStrings.kAccessDenied, LocalizationStrings.kInvalidUser, 1, 0)</SourceLine>
     <SourceLine></SourceLine>
     <SourceLine>MyWindowMessageBox.ShowModal</SourceLine>
     <SourceLine>wndLogin.Close</SourceLine>
@@ -24123,10 +24176,10 @@
  <PropertyVal Name="Composite">True</PropertyVal>
  <PropertyVal Name="Resizeable">False</PropertyVal>
  <PropertyVal Name="HasFullScreenButton">False</PropertyVal>
- <PropertyVal Name="HasMinimizeButton">True</PropertyVal>
- <PropertyVal Name="HasMaximizeButton">True</PropertyVal>
- <PropertyVal Name="HasCloseButton">True</PropertyVal>
- <PropertyVal Name="Title">Dagtotaal</PropertyVal>
+ <PropertyVal Name="HasMinimizeButton">False</PropertyVal>
+ <PropertyVal Name="HasMaximizeButton">False</PropertyVal>
+ <PropertyVal Name="HasCloseButton">False</PropertyVal>
+ <PropertyVal Name="Title">#LocalizationStrings.kDailyTotal</PropertyVal>
  <PropertyVal Name="Type">0</PropertyVal>
  <PropertyVal Name="MaximumHeight">32000</PropertyVal>
  <PropertyVal Name="MaximumWidth">32000</PropertyVal>
@@ -24652,7 +24705,7 @@
   <PropertyVal Name="TabIndex">35</PropertyVal>
   <PropertyVal Name="TabPanelIndex">0</PropertyVal>
   <PropertyVal Name="TabStop">True</PropertyVal>
-  <PropertyVal Name="Text">Momenteel in kassa:</PropertyVal>
+  <PropertyVal Name="Text">#LocalizationStrings.kCurrentlyInRegister</PropertyVal>
   <PropertyVal Name="TextAlignment">0</PropertyVal>
   <PropertyVal Name="TextColor">16777215</PropertyVal>
   <PropertyVal Name="Tooltip"></PropertyVal>
@@ -24660,7 +24713,7 @@
   <PropertyVal Name="Transparent">True</PropertyVal>
   <PropertyVal Name="Underline">False</PropertyVal>
   <PropertyVal Name="Visible">True</PropertyVal>
-  <PropertyVal Name="Width">176</PropertyVal>
+  <PropertyVal Name="Width">196</PropertyVal>
   <ControlIndex>0</ControlIndex>
   <Locked>0</Locked>
   <PartID>1937571839</PartID>
@@ -24721,7 +24774,7 @@
   <PropertyVal Name="Hint"></PropertyVal>
   <PropertyVal Name="Index">-2147483648</PropertyVal>
   <PropertyVal Name="Italic">False</PropertyVal>
-  <PropertyVal Name="Left">210</PropertyVal>
+  <PropertyVal Name="Left">239</PropertyVal>
   <PropertyVal Name="LockBottom">False</PropertyVal>
   <PropertyVal Name="LockLeft">True</PropertyVal>
   <PropertyVal Name="LockRight">False</PropertyVal>
@@ -24739,7 +24792,7 @@
   <PropertyVal Name="TextAlignment">0</PropertyVal>
   <PropertyVal Name="TextColor">16777215</PropertyVal>
   <PropertyVal Name="Tooltip"></PropertyVal>
-  <PropertyVal Name="Top">-93</PropertyVal>
+  <PropertyVal Name="Top">-137</PropertyVal>
   <PropertyVal Name="Transparent">True</PropertyVal>
   <PropertyVal Name="Underline">False</PropertyVal>
   <PropertyVal Name="ValidationMask"></PropertyVal>
@@ -24763,7 +24816,7 @@
   <PropertyVal Name="Height">45</PropertyVal>
   <PropertyVal Name="Index">-2147483648</PropertyVal>
   <PropertyVal Name="InitialParent"></PropertyVal>
-  <PropertyVal Name="Left">210</PropertyVal>
+  <PropertyVal Name="Left">239</PropertyVal>
   <PropertyVal Name="LockBottom">False</PropertyVal>
   <PropertyVal Name="LockLeft">True</PropertyVal>
   <PropertyVal Name="LockRight">False</PropertyVal>
@@ -24778,7 +24831,7 @@
   <PropertyVal Name="Top">12</PropertyVal>
   <PropertyVal Name="Transparent">True</PropertyVal>
   <PropertyVal Name="Visible">True</PropertyVal>
-  <PropertyVal Name="Width">320</PropertyVal>
+  <PropertyVal Name="Width">291</PropertyVal>
   <ControlIndex>3</ControlIndex>
   <Locked>0</Locked>
   <PartID>1109856255</PartID>
@@ -24791,7 +24844,7 @@
   <PropertyVal Name="AllowFocusRing">False</PropertyVal>
   <PropertyVal Name="AllowTabs">False</PropertyVal>
   <PropertyVal Name="Backdrop">0</PropertyVal>
-  <PropertyVal Name="ButtonCaption">OPSLAAN</PropertyVal>
+  <PropertyVal Name="ButtonCaption">#LocalizationStrings.kBtnSave</PropertyVal>
   <PropertyVal Name="ButtonColor">2</PropertyVal>
   <PropertyVal Name="ButtonState"></PropertyVal>
   <PropertyVal Name="CaptionSize">20</PropertyVal>
@@ -24865,7 +24918,7 @@
   <PropertyVal Name="AllowFocusRing">False</PropertyVal>
   <PropertyVal Name="AllowTabs">False</PropertyVal>
   <PropertyVal Name="Backdrop">0</PropertyVal>
-  <PropertyVal Name="ButtonCaption">WISSEN</PropertyVal>
+  <PropertyVal Name="ButtonCaption">#LocalizationStrings.kBtnClear</PropertyVal>
   <PropertyVal Name="ButtonColor">1</PropertyVal>
   <PropertyVal Name="ButtonState"></PropertyVal>
   <PropertyVal Name="CaptionSize">20</PropertyVal>
@@ -24879,14 +24932,14 @@
   <PropertyVal Name="LockLeft">False</PropertyVal>
   <PropertyVal Name="LockRight">True</PropertyVal>
   <PropertyVal Name="LockTop">True</PropertyVal>
-  <PropertyVal Name="Name">aspbSave2</PropertyVal>
+  <PropertyVal Name="Name">aspbClear</PropertyVal>
   <PropertyVal Name="Scope">2</PropertyVal>
   <PropertyVal Name="Super">ASPushButton</PropertyVal>
   <PropertyVal Name="TabIndex">40</PropertyVal>
   <PropertyVal Name="TabPanelIndex">0</PropertyVal>
   <PropertyVal Name="TabStop">True</PropertyVal>
   <PropertyVal Name="Tooltip"></PropertyVal>
-  <PropertyVal Name="Top">72</PropertyVal>
+  <PropertyVal Name="Top">69</PropertyVal>
   <PropertyVal Name="Transparent">True</PropertyVal>
   <PropertyVal Name="Visible">True</PropertyVal>
   <PropertyVal Name="Width">327</PropertyVal>
@@ -25404,7 +25457,45 @@
   <ItemSource>
    <TextEncoding>134217984</TextEncoding>
    <SourceLine>Sub AddSaleToDB()</SourceLine>
+   <SourceLine>dim Row As New DatabaseRecord</SourceLine>
+   <SourceLine>dim D As Date</SourceLine>
+   <SourceLine>dim BillID As String</SourceLine>
+   <SourceLine>D = New Date</SourceLine>
+   <SourceLine>dim CurrentTotal As Double</SourceLine>
    <SourceLine></SourceLine>
+   <SourceLine>BillID = format(d.Year, "0000") + format(d.Month, "00") + format(d.Day, "00") + format(D.Hour, "00") + format(d.Minute, "00") + Format(d.Second, "00")</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Try</SourceLine>
+   <SourceLine>App.TicketDB.BeginTransaction</SourceLine>
+   <SourceLine>For x As Integer = 0 to ParentListBox.ListCount -1</SourceLine>
+   <SourceLine>row.Column("billid") = BillID</SourceLine>
+   <SourceLine>row.Column("amount") = ParentListBox.Cell(x, 0) //wndPOS.lbBill.Cell(x, 0)</SourceLine>
+   <SourceLine>row.Column("article") = ParentListBox.Cell(x, 1)</SourceLine>
+   <SourceLine>row.Column("price") = ParentListBox.Cell(x, 2)</SourceLine>
+   <SourceLine>row.Column("total") = ParentListBox.Cell(x, 3)</SourceLine>
+   <SourceLine>row.Column("timestamp") = d.SQLDateTime</SourceLine>
+   <SourceLine>row.Column("day") = str(d.Day)</SourceLine>
+   <SourceLine>row.Column("month") = str(d.Month)</SourceLine>
+   <SourceLine>row.Column("year") = str(d.Year)</SourceLine>
+   <SourceLine>row.Column("paymentmethod") = "CASH"</SourceLine>
+   <SourceLine>row.Column("employee") = wndPOS.userCurrentUser</SourceLine>
+   <SourceLine>row.Column("billvoid") = "0"</SourceLine>
+   <SourceLine>row.Column("groupid") = ParentListBox.Cell(x, 4)</SourceLine>
+   <SourceLine>row.Column("vatid") = ParentListBox.Cell(x, 5)</SourceLine>
+   <SourceLine>App.TicketDB.InsertRecord("pos_sales", row)</SourceLine>
+   <SourceLine>CurrentTotal = CurrentTotal +Cdbl( ParentListBox.Cell(x, 3))</SourceLine>
+   <SourceLine>Next</SourceLine>
+   <SourceLine>App.TicketDB.CommitTransaction</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Catch error As DatabaseException</SourceLine>
+   <SourceLine>msgBox("DBError: " + App.TicketDB.ErrorMessage)</SourceLine>
+   <SourceLine>End Try</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>App.TicketDB.SQLExecute("DELETE FROM pos_openbills WHERE customername='" + OpenBillID + "'")</SourceLine>
+   <SourceLine>App.TicketDB.Commit</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>SetPrefDouble("POSDayTotal", GetPrefDouble("POSDayTotal", 0) + CurrentTotal)</SourceLine>
    <SourceLine>End Sub</SourceLine>
   </ItemSource>
   <TextEncoding>134217984</TextEncoding>
@@ -25487,10 +25578,10 @@
  <PropertyVal Name="Composite">False</PropertyVal>
  <PropertyVal Name="Resizeable">False</PropertyVal>
  <PropertyVal Name="HasFullScreenButton">False</PropertyVal>
- <PropertyVal Name="HasMinimizeButton">True</PropertyVal>
- <PropertyVal Name="HasMaximizeButton">True</PropertyVal>
- <PropertyVal Name="HasCloseButton">True</PropertyVal>
- <PropertyVal Name="Title">Afrekenen</PropertyVal>
+ <PropertyVal Name="HasMinimizeButton">False</PropertyVal>
+ <PropertyVal Name="HasMaximizeButton">False</PropertyVal>
+ <PropertyVal Name="HasCloseButton">False</PropertyVal>
+ <PropertyVal Name="Title">#LocalizationStrings.kCheckout</PropertyVal>
  <PropertyVal Name="Type">0</PropertyVal>
  <PropertyVal Name="MaximumHeight">32000</PropertyVal>
  <PropertyVal Name="MaximumWidth">32000</PropertyVal>
@@ -25744,12 +25835,16 @@
     <SourceLine>End If</SourceLine>
     <SourceLine></SourceLine>
     <SourceLine></SourceLine>
+    <SourceLine></SourceLine>
     <SourceLine>Else</SourceLine>
     <SourceLine>ChangeAmt = TotalAmt</SourceLine>
     <SourceLine>lblChangeAmt.TextColor = RGB(255,0,0)</SourceLine>
     <SourceLine>lblChangeAmt.Text = "-€ " + Format(ChangeAmt, "#.00")</SourceLine>
+    <SourceLine></SourceLine>
     <SourceLine>End If</SourceLine>
     <SourceLine></SourceLine>
+    <SourceLine>asDMDDisplay.Caption = me.Text</SourceLine>
+    <SourceLine>asDMDDisplay.Refresh</SourceLine>
     <SourceLine>End Sub</SourceLine>
    </ItemSource>
   </HookInstance>
@@ -26026,42 +26121,7 @@
     <SourceLine>End If</SourceLine>
     <SourceLine></SourceLine>
     <SourceLine>if tfName.Text &lt;&gt; "" Then</SourceLine>
-    <SourceLine>//"CREATE TABLE pos_sales (id Integer PRIMARY KEY AUTOINCREMENT, billid Integer,  article VarChar, amount Integer, price Double, total Double,  timestamp VarChar, day VarChar, month VarChar, year VarCh, paymentmethod VarChar, invoice VarChar)"</SourceLine>
-    <SourceLine>// TODO: Create a function for this because holy shit this is stupid</SourceLine>
-    <SourceLine>Try</SourceLine>
-    <SourceLine>App.TicketDB.BeginTransaction</SourceLine>
-    <SourceLine>For x As Integer = 0 to ParentListBox.ListCount -1</SourceLine>
-    <SourceLine>row.Column("billid") = BillID</SourceLine>
-    <SourceLine>row.Column("amount") = ParentListBox.Cell(x, 0) //wndPOS.lbBill.Cell(x, 0)</SourceLine>
-    <SourceLine>row.Column("article") = ParentListBox.Cell(x, 1)</SourceLine>
-    <SourceLine>row.Column("price") = ParentListBox.Cell(x, 2)</SourceLine>
-    <SourceLine>row.Column("total") = ParentListBox.Cell(x, 3)</SourceLine>
-    <SourceLine>row.Column("timestamp") = d.SQLDateTime</SourceLine>
-    <SourceLine>row.Column("day") = str(d.Day)</SourceLine>
-    <SourceLine>row.Column("month") = str(d.Month)</SourceLine>
-    <SourceLine>row.Column("year") = str(d.Year)</SourceLine>
-    <SourceLine>row.Column("paymentmethod") = "CASH"</SourceLine>
-    <SourceLine>row.Column("employee") = wndPOS.userCurrentUser</SourceLine>
-    <SourceLine>row.Column("billvoid") = "0"</SourceLine>
-    <SourceLine>row.Column("groupid") = ParentListBox.Cell(x, 4)</SourceLine>
-    <SourceLine>row.Column("vatid") = ParentListBox.Cell(x, 5)</SourceLine>
-    <SourceLine>App.TicketDB.InsertRecord("pos_sales", row)</SourceLine>
-    <SourceLine>CurrentTotal = CurrentTotal +Cdbl( ParentListBox.Cell(x, 3))</SourceLine>
-    <SourceLine>Next</SourceLine>
-    <SourceLine>App.TicketDB.CommitTransaction</SourceLine>
-    <SourceLine></SourceLine>
-    <SourceLine>Catch error As DatabaseException</SourceLine>
-    <SourceLine>msgBox("DBError: " + App.TicketDB.ErrorMessage)</SourceLine>
-    <SourceLine>End Try</SourceLine>
-    <SourceLine></SourceLine>
-    <SourceLine></SourceLine>
-    <SourceLine></SourceLine>
-    <SourceLine></SourceLine>
-    <SourceLine>App.TicketDB.SQLExecute("DELETE FROM pos_openbills WHERE customername='" + OpenBillID + "'")</SourceLine>
-    <SourceLine>App.TicketDB.Commit</SourceLine>
-    <SourceLine></SourceLine>
-    <SourceLine></SourceLine>
-    <SourceLine>SetPrefDouble("POSDayTotal", GetPrefDouble("POSDayTotal", 0) + CurrentTotal)</SourceLine>
+    <SourceLine>AddSaleToDB</SourceLine>
     <SourceLine></SourceLine>
     <SourceLine>wndPOS.srlDrawer.SerialPort = System.SerialPort(GetPrefString("SerialCashDrwPort", ""))</SourceLine>
     <SourceLine>if wndPOS.srlDrawer.Open Then</SourceLine>
@@ -26105,15 +26165,12 @@
     <TextEncoding>134217984</TextEncoding>
     <SourceLine>Sub Action()</SourceLine>
     <SourceLine></SourceLine>
-    <SourceLine>dim Row As New DatabaseRecord</SourceLine>
-    <SourceLine>dim D As Date</SourceLine>
-    <SourceLine>dim BillID As String</SourceLine>
-    <SourceLine>D = New Date</SourceLine>
-    <SourceLine></SourceLine>
-    <SourceLine>dim CurrentTotal As Double</SourceLine>
     <SourceLine></SourceLine>
     <SourceLine></SourceLine>
-    <SourceLine>BillID = format(d.Year, "0000") + format(d.Month, "00") + format(d.Day, "00") + format(D.Hour, "00") + format(d.Minute, "00") + Format(d.Second, "00")</SourceLine>
+    <SourceLine></SourceLine>
+    <SourceLine></SourceLine>
+    <SourceLine></SourceLine>
+    <SourceLine></SourceLine>
     <SourceLine></SourceLine>
     <SourceLine>if OpenBillID = "" Then</SourceLine>
     <SourceLine>ParentListBox = wndPOS.lbBill</SourceLine>
@@ -26123,50 +26180,15 @@
     <SourceLine></SourceLine>
     <SourceLine></SourceLine>
     <SourceLine>// Title As String, Message As String, MessageType As Integer, Buttons As Integer</SourceLine>
-    <SourceLine>Dim MyWindowMessageBox As New wndMessageBox("Betaling via bancontact", "Voer de betalingsprocedure uit op de bancontact-terminal AUB. Totaalbedrag: " + lblTotalAmt.Text, 4, 1)</SourceLine>
+    <SourceLine>Dim MyWindowMessageBox As New wndMessageBox(LocalizationStrings.kEFTPayment, LocalizationStrings.kEFTPaymentTerminal + lblTotalAmt.Text, 4, 1)</SourceLine>
     <SourceLine></SourceLine>
     <SourceLine>MyWindowMessageBox.ShowModal</SourceLine>
     <SourceLine></SourceLine>
     <SourceLine>if not MyWindowMessageBox.okPressed Then</SourceLine>
     <SourceLine></SourceLine>
     <SourceLine>Else</SourceLine>
-    <SourceLine>For x As Integer = 0 to ParentListBox.ListCount -1</SourceLine>
-    <SourceLine>row.Column("billid") = BillID</SourceLine>
-    <SourceLine>row.Column("amount") = ParentListBox.Cell(x, 0) //wndPOS.lbBill.Cell(x, 0)</SourceLine>
-    <SourceLine>row.Column("article") = ParentListBox.Cell(x, 1)</SourceLine>
-    <SourceLine>row.Column("price") = ParentListBox.Cell(x, 2)</SourceLine>
-    <SourceLine>row.Column("total") = ParentListBox.Cell(x, 3)</SourceLine>
-    <SourceLine>row.Column("timestamp") = d.SQLDateTime</SourceLine>
-    <SourceLine>row.Column("day") = str(d.Day)</SourceLine>
-    <SourceLine>row.Column("month") = str(d.Month)</SourceLine>
-    <SourceLine>row.Column("year") = str(d.Year)</SourceLine>
-    <SourceLine>row.Column("paymentmethod") = "BC"</SourceLine>
-    <SourceLine>row.Column("employee") = wndPOS.userCurrentUser</SourceLine>
-    <SourceLine>row.Column("billvoid") = "0"</SourceLine>
-    <SourceLine>row.Column("groupid") = ParentListBox.Cell(x, 4)</SourceLine>
-    <SourceLine>row.Column("vatid") = ParentListBox.Cell(x, 5)</SourceLine>
-    <SourceLine>App.TicketDB.InsertRecord("pos_sales", row)</SourceLine>
-    <SourceLine>CurrentTotal = CurrentTotal +Cdbl( ParentListBox.Cell(x, 3))</SourceLine>
+    <SourceLine>AddSaleToDB</SourceLine>
     <SourceLine></SourceLine>
-    <SourceLine></SourceLine>
-    <SourceLine></SourceLine>
-    <SourceLine>if App.TicketDB.Error then</SourceLine>
-    <SourceLine>msgBox("Error: " + App.TicketDB.ErrorMessage)</SourceLine>
-    <SourceLine></SourceLine>
-    <SourceLine></SourceLine>
-    <SourceLine>end if</SourceLine>
-    <SourceLine>Next</SourceLine>
-    <SourceLine></SourceLine>
-    <SourceLine>App.TicketDB.SQLExecute("DELETE FROM pos_openbills WHERE customername='" + OpenBillID + "'")</SourceLine>
-    <SourceLine>App.TicketDB.Commit</SourceLine>
-    <SourceLine></SourceLine>
-    <SourceLine></SourceLine>
-    <SourceLine></SourceLine>
-    <SourceLine>if App.TicketDB.Error then</SourceLine>
-    <SourceLine>msgBox("Error: " + App.TicketDB.ErrorMessage)</SourceLine>
-    <SourceLine></SourceLine>
-    <SourceLine></SourceLine>
-    <SourceLine>end if</SourceLine>
     <SourceLine>if GetPrefBoolean("LogoutAfterBill", True) = True Then</SourceLine>
     <SourceLine></SourceLine>
     <SourceLine>self.hide</SourceLine>
@@ -26194,6 +26216,9 @@
    </ItemSource>
   </HookInstance>
  </ControlBehavior>
+ <ControlBehavior>
+  <Superclass>ASDMDCanvas</Superclass>
+ </ControlBehavior>
  <Control>
   <ControlClass>TextField</ControlClass>
   <ItemName>TextField</ItemName>
@@ -26213,7 +26238,7 @@
   <PropertyVal Name="Hint"></PropertyVal>
   <PropertyVal Name="Index">-2147483648</PropertyVal>
   <PropertyVal Name="Italic">False</PropertyVal>
-  <PropertyVal Name="Left">15</PropertyVal>
+  <PropertyVal Name="Left">-439</PropertyVal>
   <PropertyVal Name="LockBottom">False</PropertyVal>
   <PropertyVal Name="LockLeft">True</PropertyVal>
   <PropertyVal Name="LockRight">False</PropertyVal>
@@ -26231,7 +26256,7 @@
   <PropertyVal Name="TextAlignment">0</PropertyVal>
   <PropertyVal Name="TextColor">16777215</PropertyVal>
   <PropertyVal Name="Tooltip"></PropertyVal>
-  <PropertyVal Name="Top">14</PropertyVal>
+  <PropertyVal Name="Top">-276</PropertyVal>
   <PropertyVal Name="Transparent">True</PropertyVal>
   <PropertyVal Name="Underline">False</PropertyVal>
   <PropertyVal Name="ValidationMask"></PropertyVal>
@@ -27064,6 +27089,40 @@
   <ControlIndex>22</ControlIndex>
   <Locked>0</Locked>
   <PartID>622921727</PartID>
+ </Control>
+ <Control>
+  <ControlClass>ASDMDCanvas</ControlClass>
+  <ItemName>ASDMDCanvas</ItemName>
+  <PropertyVal Name="AllowAutoDeactivate">True</PropertyVal>
+  <PropertyVal Name="AllowFocus">False</PropertyVal>
+  <PropertyVal Name="AllowFocusRing">True</PropertyVal>
+  <PropertyVal Name="AllowTabs">False</PropertyVal>
+  <PropertyVal Name="Backdrop">0</PropertyVal>
+  <PropertyVal Name="Caption">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</PropertyVal>
+  <PropertyVal Name="DoubleBuffer">True</PropertyVal>
+  <PropertyVal Name="Enabled">True</PropertyVal>
+  <PropertyVal Name="Height">45</PropertyVal>
+  <PropertyVal Name="Index">-2147483648</PropertyVal>
+  <PropertyVal Name="InitialParent"></PropertyVal>
+  <PropertyVal Name="Left">15</PropertyVal>
+  <PropertyVal Name="LockBottom">False</PropertyVal>
+  <PropertyVal Name="LockLeft">True</PropertyVal>
+  <PropertyVal Name="LockRight">False</PropertyVal>
+  <PropertyVal Name="LockTop">True</PropertyVal>
+  <PropertyVal Name="Name">asDMDDisplay</PropertyVal>
+  <PropertyVal Name="Scope">2</PropertyVal>
+  <PropertyVal Name="Super">ASDMDCanvas</PropertyVal>
+  <PropertyVal Name="TabIndex">53</PropertyVal>
+  <PropertyVal Name="TabPanelIndex">0</PropertyVal>
+  <PropertyVal Name="TabStop">True</PropertyVal>
+  <PropertyVal Name="Tooltip"></PropertyVal>
+  <PropertyVal Name="Top">20</PropertyVal>
+  <PropertyVal Name="Transparent">True</PropertyVal>
+  <PropertyVal Name="Visible">True</PropertyVal>
+  <PropertyVal Name="Width">248</PropertyVal>
+  <ControlIndex>23</ControlIndex>
+  <Locked>0</Locked>
+  <PartID>1818036223</PartID>
  </Control>
 </block>
 <block type="Window" ID="1414586367">
@@ -31984,8 +32043,8 @@
  <PropertyVal Name="MenuBarVisible">False</PropertyVal>
  <PropertyVal Name="MenuBar">0</PropertyVal>
  <PropertyVal Name="Backdrop">0</PropertyVal>
- <PropertyVal Name="BackgroundColor">16777215</PropertyVal>
- <PropertyVal Name="HasBackgroundColor">False</PropertyVal>
+ <PropertyVal Name="BackgroundColor">3026483</PropertyVal>
+ <PropertyVal Name="HasBackgroundColor">True</PropertyVal>
  <PropertyVal Name="Visible">True</PropertyVal>
  <PropertyVal Name="DefaultLocation">0</PropertyVal>
  <PropertyVal Name="ImplicitInstance">True</PropertyVal>
@@ -31994,10 +32053,10 @@
  <PropertyVal Name="Composite">False</PropertyVal>
  <PropertyVal Name="Resizeable">False</PropertyVal>
  <PropertyVal Name="HasFullScreenButton">False</PropertyVal>
- <PropertyVal Name="HasMinimizeButton">True</PropertyVal>
- <PropertyVal Name="HasMaximizeButton">True</PropertyVal>
- <PropertyVal Name="HasCloseButton">True</PropertyVal>
- <PropertyVal Name="Title">Openstaande rekeningen - AuroraPOS</PropertyVal>
+ <PropertyVal Name="HasMinimizeButton">False</PropertyVal>
+ <PropertyVal Name="HasMaximizeButton">False</PropertyVal>
+ <PropertyVal Name="HasCloseButton">False</PropertyVal>
+ <PropertyVal Name="Title">#LocalizationStrings.kTicketManagement</PropertyVal>
  <PropertyVal Name="Type">0</PropertyVal>
  <PropertyVal Name="MaximumHeight">32000</PropertyVal>
  <PropertyVal Name="MaximumWidth">32000</PropertyVal>
@@ -32252,10 +32311,10 @@
     <TextEncoding>134217984</TextEncoding>
     <SourceLine>Function CellBackgroundPaint(g As Graphics, row As Integer, column As Integer) As Boolean</SourceLine>
     <SourceLine>if me.Selected(row) = True Then</SourceLine>
-    <SourceLine>g.ForeColor = RGB(60,60,60)</SourceLine>
+    <SourceLine>g.ForeColor = RGB(0,75,120)</SourceLine>
     <SourceLine></SourceLine>
     <SourceLine>Else</SourceLine>
-    <SourceLine>g.ForeColor = RGB(120,120,120)</SourceLine>
+    <SourceLine>g.ForeColor = RGB(34,34,38)</SourceLine>
     <SourceLine></SourceLine>
     <SourceLine>End IF</SourceLine>
     <SourceLine></SourceLine>
@@ -32272,14 +32331,16 @@
    <ItemSource>
     <TextEncoding>134217984</TextEncoding>
     <SourceLine>Function CellTextPaint(g As Graphics, row As Integer, column As Integer, x as Integer, y as Integer) As Boolean</SourceLine>
+    <SourceLine>// g.ForeColor = rgb(255,255,255)</SourceLine>
     <SourceLine>if me.Cell(Row, 2) = "1" Then</SourceLine>
     <SourceLine>g.ForeColor = RGB(255,0,0)</SourceLine>
-    <SourceLine>g.DrawLine 0,g.Height / 2, g.Width, g.Height / 2</SourceLine>
+    <SourceLine>g.DrawLine(0, g.Height / 2, g.Width, g.Height / 2)</SourceLine>
     <SourceLine>g.Bold = True</SourceLine>
     <SourceLine>Else</SourceLine>
     <SourceLine>g.ForeColor = RGB(255,255,255)</SourceLine>
     <SourceLine>g.Bold = True</SourceLine>
     <SourceLine>End If</SourceLine>
+    <SourceLine></SourceLine>
     <SourceLine>End Function</SourceLine>
    </ItemSource>
   </HookInstance>
@@ -32305,7 +32366,7 @@
     <TextEncoding>134217984</TextEncoding>
     <SourceLine>Sub Change()</SourceLine>
     <SourceLine>UpdateSalesList</SourceLine>
-    <SourceLine>lblDate.Text = "Tijdstip: " + lbTickets.Cell(lbTickets.ListIndex, 1)</SourceLine>
+    <SourceLine>lblDate.Text = LocalizationStrings.kTime + ": " + lbTickets.Cell(lbTickets.ListIndex, 1)</SourceLine>
     <SourceLine></SourceLine>
     <SourceLine>End Sub</SourceLine>
    </ItemSource>
@@ -32325,11 +32386,11 @@
     <TextEncoding>134217984</TextEncoding>
     <SourceLine>Sub Action()</SourceLine>
     <SourceLine>if GetPrefBoolean("POSShowVoidTickets", False) = True Then</SourceLine>
-    <SourceLine>me.ButtonCaption = "GEANNULEERDE REKENINGEN TONEN"</SourceLine>
+    <SourceLine>me.ButtonCaption = LocalizationStrings.kBtnShowCancelledBills</SourceLine>
     <SourceLine>SetPrefBoolean("POSShowVoidTickets", False)</SourceLine>
     <SourceLine>ElseIf GetPrefBoolean("POSShowVoidTickets", False) = False Then</SourceLine>
     <SourceLine>SetPrefBoolean("POSShowVoidTickets", True)</SourceLine>
-    <SourceLine>me.ButtonCaption  = "GEANNULEERDE REKENINGEN VERBERGEN"</SourceLine>
+    <SourceLine>me.ButtonCaption  = LocalizationStrings.kBtnHideCancelledBills</SourceLine>
     <SourceLine>End If</SourceLine>
     <SourceLine></SourceLine>
     <SourceLine>UpdateOpenBills</SourceLine>
@@ -32348,11 +32409,12 @@
     <TextEncoding>134217984</TextEncoding>
     <SourceLine>Sub Open()</SourceLine>
     <SourceLine>if GetPrefBoolean("POSShowVoidTickets", False) = True Then</SourceLine>
-    <SourceLine>me.ButtonCaption = "GEANNULEERDE REKENINGEN VERBERGEN"</SourceLine>
+    <SourceLine>me.ButtonCaption = LocalizationStrings.kBtnHideCancelledBills</SourceLine>
+    <SourceLine>SetPrefBoolean("POSShowVoidTickets", False)</SourceLine>
     <SourceLine>ElseIf GetPrefBoolean("POSShowVoidTickets", False) = False Then</SourceLine>
-    <SourceLine>me.ButtonCaption  = "GEANNULEERDE REKENINGEN TONEN"</SourceLine>
+    <SourceLine>SetPrefBoolean("POSShowVoidTickets", True)</SourceLine>
+    <SourceLine>me.ButtonCaption  = LocalizationStrings.kBtnShowCancelledBills</SourceLine>
     <SourceLine>End If</SourceLine>
-    <SourceLine></SourceLine>
     <SourceLine>End Sub</SourceLine>
    </ItemSource>
   </HookInstance>
@@ -32372,7 +32434,7 @@
     <SourceLine></SourceLine>
     <SourceLine></SourceLine>
     <SourceLine></SourceLine>
-    <SourceLine>dim MyMsgBox As New wndMessageBox("Bent u zeker dat u de rekening wilt annuleren? ", "Dit kan niet meer ongedaan gemaakt worden!", 1, 4)</SourceLine>
+    <SourceLine>dim MyMsgBox As New wndMessageBox(LocalizationStrings.kQVoidBill, LocalizationStrings.kCannotBeUndone, 1, 4)</SourceLine>
     <SourceLine></SourceLine>
     <SourceLine>MyMsgBox.ShowModal</SourceLine>
     <SourceLine></SourceLine>
@@ -32417,7 +32479,7 @@
   <PropertyVal Name="BorderThickness">0.00</PropertyVal>
   <PropertyVal Name="BottomRightColor">0</PropertyVal>
   <PropertyVal Name="Enabled">True</PropertyVal>
-  <PropertyVal Name="FillColor">7895160</PropertyVal>
+  <PropertyVal Name="FillColor">2236966</PropertyVal>
   <PropertyVal Name="Height">61</PropertyVal>
   <PropertyVal Name="Index">-2147483648</PropertyVal>
   <PropertyVal Name="InitialParent"></PropertyVal>
@@ -32469,7 +32531,7 @@
   <PropertyVal Name="TabIndex">0</PropertyVal>
   <PropertyVal Name="TabPanelIndex">0</PropertyVal>
   <PropertyVal Name="TabStop">True</PropertyVal>
-  <PropertyVal Name="Text">Rekeningbeheer</PropertyVal>
+  <PropertyVal Name="Text">#LocalizationStrings.kTicketManagement</PropertyVal>
   <PropertyVal Name="TextAlignment">0</PropertyVal>
   <PropertyVal Name="TextColor">16777215</PropertyVal>
   <PropertyVal Name="Tooltip"></PropertyVal>
@@ -32547,7 +32609,7 @@
   <PropertyVal Name="TabIndex">15</PropertyVal>
   <PropertyVal Name="TabPanelIndex">0</PropertyVal>
   <PropertyVal Name="TabStop">True</PropertyVal>
-  <PropertyVal Name="Text">Totaal: € 0.00</PropertyVal>
+  <PropertyVal Name="Text">€ 0.00</PropertyVal>
   <PropertyVal Name="TextAlignment">3</PropertyVal>
   <PropertyVal Name="TextColor">16777215</PropertyVal>
   <PropertyVal Name="Tooltip"></PropertyVal>
@@ -32700,7 +32762,7 @@
   <PropertyVal Name="TabIndex">24</PropertyVal>
   <PropertyVal Name="TabPanelIndex">0</PropertyVal>
   <PropertyVal Name="TabStop">True</PropertyVal>
-  <PropertyVal Name="Text">Selecteer een rekening</PropertyVal>
+  <PropertyVal Name="Text">#LocalizationStrings.KSelectBill</PropertyVal>
   <PropertyVal Name="TextAlignment">0</PropertyVal>
   <PropertyVal Name="TextColor">16777215</PropertyVal>
   <PropertyVal Name="Tooltip"></PropertyVal>
@@ -32721,7 +32783,7 @@
   <PropertyVal Name="AllowFocusRing">False</PropertyVal>
   <PropertyVal Name="AllowTabs">False</PropertyVal>
   <PropertyVal Name="Backdrop">0</PropertyVal>
-  <PropertyVal Name="ButtonCaption">Untitled</PropertyVal>
+  <PropertyVal Name="ButtonCaption">#LocalizationStrings.kBtnShowCancelledBills</PropertyVal>
   <PropertyVal Name="ButtonColor">3</PropertyVal>
   <PropertyVal Name="ButtonState"></PropertyVal>
   <PropertyVal Name="CaptionSize">12</PropertyVal>
@@ -32758,7 +32820,7 @@
   <PropertyVal Name="AllowFocusRing">False</PropertyVal>
   <PropertyVal Name="AllowTabs">False</PropertyVal>
   <PropertyVal Name="Backdrop">0</PropertyVal>
-  <PropertyVal Name="ButtonCaption">REK. ANNULEREN</PropertyVal>
+  <PropertyVal Name="ButtonCaption">#LocalizationStrings.kBtnCancelBill</PropertyVal>
   <PropertyVal Name="ButtonColor">3</PropertyVal>
   <PropertyVal Name="ButtonState"></PropertyVal>
   <PropertyVal Name="CaptionSize">12</PropertyVal>
@@ -32795,7 +32857,7 @@
   <PropertyVal Name="AllowFocusRing">False</PropertyVal>
   <PropertyVal Name="AllowTabs">False</PropertyVal>
   <PropertyVal Name="Backdrop">0</PropertyVal>
-  <PropertyVal Name="ButtonCaption">AFDRUKKEN</PropertyVal>
+  <PropertyVal Name="ButtonCaption">#LocalizationStrings.kBtnReprintBill</PropertyVal>
   <PropertyVal Name="ButtonColor">3</PropertyVal>
   <PropertyVal Name="ButtonState"></PropertyVal>
   <PropertyVal Name="CaptionSize">12</PropertyVal>
@@ -33795,6 +33857,606 @@
    <ItemDef>ANNULEREN</ItemDef>
   </ConstantInstance>
  </Constant>
+ <Constant>
+  <ItemName>kOpenTabs</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>2066880511</PartID>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemType>0</ItemType>
+  <ItemDef></ItemDef>
+  <ItemFlags>65</ItemFlags>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>Open Tabs</ItemDef>
+  </ConstantInstance>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>6</ItemLanguage>
+   <ItemDef>Openstaande rekeningen</ItemDef>
+  </ConstantInstance>
+ </Constant>
+ <Constant>
+  <ItemName>kName</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>688023551</PartID>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemType>0</ItemType>
+  <ItemDef></ItemDef>
+  <ItemFlags>65</ItemFlags>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>Name</ItemDef>
+  </ConstantInstance>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>6</ItemLanguage>
+   <ItemDef>Naam</ItemDef>
+  </ConstantInstance>
+ </Constant>
+ <Constant>
+  <ItemName>kSelectATab</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1653886975</PartID>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemType>0</ItemType>
+  <ItemDef></ItemDef>
+  <ItemFlags>65</ItemFlags>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>Please select a tab</ItemDef>
+  </ConstantInstance>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>6</ItemLanguage>
+   <ItemDef>Gelieve een rekening te selecteren AUB.</ItemDef>
+  </ConstantInstance>
+ </Constant>
+ <Constant>
+  <ItemName>kCheckout</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1140355071</PartID>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemType>0</ItemType>
+  <ItemDef></ItemDef>
+  <ItemFlags>65</ItemFlags>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>Checkout</ItemDef>
+  </ConstantInstance>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>6</ItemLanguage>
+   <ItemDef>Afrekenen</ItemDef>
+  </ConstantInstance>
+ </Constant>
+ <Constant>
+  <ItemName>kCurrentlyInRegister</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1892554751</PartID>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemType>0</ItemType>
+  <ItemDef></ItemDef>
+  <ItemFlags>65</ItemFlags>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>Currently in register:</ItemDef>
+  </ConstantInstance>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>6</ItemLanguage>
+   <ItemDef>Momenteel in kassa:</ItemDef>
+  </ConstantInstance>
+ </Constant>
+ <Constant>
+  <ItemName>kDailyTotal</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>964671487</PartID>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemType>0</ItemType>
+  <ItemDef></ItemDef>
+  <ItemFlags>65</ItemFlags>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>Daily Total</ItemDef>
+  </ConstantInstance>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>6</ItemLanguage>
+   <ItemDef>Dagtotaal</ItemDef>
+  </ConstantInstance>
+ </Constant>
+ <Constant>
+  <ItemName>kBtnSave</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>380067839</PartID>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemType>0</ItemType>
+  <ItemDef></ItemDef>
+  <ItemFlags>65</ItemFlags>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>SAVE</ItemDef>
+  </ConstantInstance>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>6</ItemLanguage>
+   <ItemDef>OPSLAAN</ItemDef>
+  </ConstantInstance>
+ </Constant>
+ <Constant>
+  <ItemName>kTicketManagement</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1335975935</PartID>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemType>0</ItemType>
+  <ItemDef></ItemDef>
+  <ItemFlags>65</ItemFlags>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>Bill Management</ItemDef>
+  </ConstantInstance>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>6</ItemLanguage>
+   <ItemDef>Rekeningbeheer</ItemDef>
+  </ConstantInstance>
+ </Constant>
+ <Constant>
+  <ItemName>kBtnCancelBill</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1738084351</PartID>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemType>0</ItemType>
+  <ItemDef></ItemDef>
+  <ItemFlags>65</ItemFlags>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>INVALIDATE BILL</ItemDef>
+  </ConstantInstance>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>6</ItemLanguage>
+   <ItemDef>REK. ANNULEREN</ItemDef>
+  </ConstantInstance>
+ </Constant>
+ <Constant>
+  <ItemName>kBtnReprintBill</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>276023295</PartID>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemType>0</ItemType>
+  <ItemDef></ItemDef>
+  <ItemFlags>65</ItemFlags>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>PRINT DUPLICATE</ItemDef>
+  </ConstantInstance>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>6</ItemLanguage>
+   <ItemDef>DUPL. AFDRUKKEN</ItemDef>
+  </ConstantInstance>
+ </Constant>
+ <Constant>
+  <ItemName>kBtnShowCancelledBills</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>728422399</PartID>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemType>0</ItemType>
+  <ItemDef></ItemDef>
+  <ItemFlags>65</ItemFlags>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>SHOW INVALIDATED BILLS</ItemDef>
+  </ConstantInstance>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>6</ItemLanguage>
+   <ItemDef>GEANNULEERDE REKENINGEN TONEN</ItemDef>
+  </ConstantInstance>
+ </Constant>
+ <Constant>
+  <ItemName>kBtnHideCancelledBills</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>2006476799</PartID>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemType>0</ItemType>
+  <ItemDef></ItemDef>
+  <ItemFlags>65</ItemFlags>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>HIDE INVALIDATED BILLS</ItemDef>
+  </ConstantInstance>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>6</ItemLanguage>
+   <ItemDef>GEANNULEERDE REKENINGEN VERBERGEN</ItemDef>
+  </ConstantInstance>
+ </Constant>
+ <Constant>
+  <ItemName>kTime</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>336402431</PartID>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemType>0</ItemType>
+  <ItemDef></ItemDef>
+  <ItemFlags>65</ItemFlags>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>Time</ItemDef>
+  </ConstantInstance>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>6</ItemLanguage>
+   <ItemDef>Tijdstip</ItemDef>
+  </ConstantInstance>
+ </Constant>
+ <Constant>
+  <ItemName>kSelectBill</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1859360767</PartID>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemType>0</ItemType>
+  <ItemDef></ItemDef>
+  <ItemFlags>65</ItemFlags>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>Please select a bill</ItemDef>
+  </ConstantInstance>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>6</ItemLanguage>
+   <ItemDef>Selecteer een ticket AUB</ItemDef>
+  </ConstantInstance>
+ </Constant>
+ <Constant>
+  <ItemName>kQClearBill</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1189402623</PartID>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemType>0</ItemType>
+  <ItemDef></ItemDef>
+  <ItemFlags>65</ItemFlags>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>Clear the full bill?</ItemDef>
+  </ConstantInstance>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>6</ItemLanguage>
+   <ItemDef>Volledige rekening wissen?</ItemDef>
+  </ConstantInstance>
+ </Constant>
+ <Constant>
+  <ItemName>kCannotBeUndone</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>690552831</PartID>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemType>0</ItemType>
+  <ItemDef></ItemDef>
+  <ItemFlags>65</ItemFlags>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>This can not be undone!</ItemDef>
+  </ConstantInstance>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>6</ItemLanguage>
+   <ItemDef>Dit kan niet ongedaan gemaakt worden!</ItemDef>
+  </ConstantInstance>
+ </Constant>
+ <Constant>
+  <ItemName>kQLogout</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>157491199</PartID>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemType>0</ItemType>
+  <ItemDef></ItemDef>
+  <ItemFlags>65</ItemFlags>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>Are you sure you want to log out?</ItemDef>
+  </ConstantInstance>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>6</ItemLanguage>
+   <ItemDef>Bent u zeker dat u wilt afmelden?</ItemDef>
+  </ConstantInstance>
+ </Constant>
+ <Constant>
+  <ItemName>kAccessDenied</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1204070399</PartID>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemType>0</ItemType>
+  <ItemDef></ItemDef>
+  <ItemFlags>65</ItemFlags>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>Access denied</ItemDef>
+  </ConstantInstance>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>6</ItemLanguage>
+   <ItemDef>Toegang geweigerd</ItemDef>
+  </ConstantInstance>
+ </Constant>
+ <Constant>
+  <ItemName>kBadgeUnknown</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1335060479</PartID>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemType>0</ItemType>
+  <ItemDef></ItemDef>
+  <ItemFlags>65</ItemFlags>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>The scanned badge is not known in the system</ItemDef>
+  </ConstantInstance>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>6</ItemLanguage>
+   <ItemDef>De gebruikte badge is niet gekend in het systeem</ItemDef>
+  </ConstantInstance>
+ </Constant>
+ <Constant>
+  <ItemName>kInvalidUser</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>2057226239</PartID>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemType>0</ItemType>
+  <ItemDef></ItemDef>
+  <ItemFlags>65</ItemFlags>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>The specified UserID is invalid</ItemDef>
+  </ConstantInstance>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>6</ItemLanguage>
+   <ItemDef>De opgegeven gebruikers-ID is ongeldig</ItemDef>
+  </ConstantInstance>
+ </Constant>
+ <Constant>
+  <ItemName>kNoItems</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1459908607</PartID>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemType>0</ItemType>
+  <ItemDef></ItemDef>
+  <ItemFlags>65</ItemFlags>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>No items</ItemDef>
+  </ConstantInstance>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>6</ItemLanguage>
+   <ItemDef>Geen artikelen</ItemDef>
+  </ConstantInstance>
+ </Constant>
+ <Constant>
+  <ItemName>kDidNotSpecifyItems</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>597671935</PartID>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemType>0</ItemType>
+  <ItemDef></ItemDef>
+  <ItemFlags>65</ItemFlags>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>You did not specify any items</ItemDef>
+  </ConstantInstance>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>6</ItemLanguage>
+   <ItemDef>U heeft geen artikelen aangeduid</ItemDef>
+  </ConstantInstance>
+ </Constant>
+ <Constant>
+  <ItemName>kDeleteBill</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>502587391</PartID>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemType>0</ItemType>
+  <ItemDef></ItemDef>
+  <ItemFlags>65</ItemFlags>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>Delete this bill?</ItemDef>
+  </ConstantInstance>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>6</ItemLanguage>
+   <ItemDef>Wilt u deze rekening wissen?</ItemDef>
+  </ConstantInstance>
+ </Constant>
+ <Constant>
+  <ItemName>kDeleteTabPre</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>191377407</PartID>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemType>0</ItemType>
+  <ItemDef></ItemDef>
+  <ItemFlags>65</ItemFlags>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>Delete </ItemDef>
+  </ConstantInstance>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>6</ItemLanguage>
+   <ItemDef>Wilt u de rekening van </ItemDef>
+  </ConstantInstance>
+ </Constant>
+ <Constant>
+  <ItemName>kDeleteTabPost</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1472792575</PartID>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemType>0</ItemType>
+  <ItemDef></ItemDef>
+  <ItemFlags>65</ItemFlags>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>tab?</ItemDef>
+  </ConstantInstance>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>6</ItemLanguage>
+   <ItemDef>wissen?</ItemDef>
+  </ConstantInstance>
+ </Constant>
+ <Constant>
+  <ItemName>kQVoidBill</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1452957695</PartID>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemType>0</ItemType>
+  <ItemDef></ItemDef>
+  <ItemFlags>65</ItemFlags>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>Invalidate bill?</ItemDef>
+  </ConstantInstance>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>6</ItemLanguage>
+   <ItemDef>Rekening annuleren?</ItemDef>
+  </ConstantInstance>
+ </Constant>
+ <Constant>
+  <ItemName>kEFTPayment</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1326710783</PartID>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemType>0</ItemType>
+  <ItemDef></ItemDef>
+  <ItemFlags>65</ItemFlags>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>EFT Payment</ItemDef>
+  </ConstantInstance>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>6</ItemLanguage>
+   <ItemDef>Betaling EFT</ItemDef>
+  </ConstantInstance>
+ </Constant>
+ <Constant>
+  <ItemName>kEFTPaymentTerminal</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1590837247</PartID>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemType>0</ItemType>
+  <ItemDef></ItemDef>
+  <ItemFlags>65</ItemFlags>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>Please process the payment on the EFT terminal. Total: </ItemDef>
+  </ConstantInstance>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>6</ItemLanguage>
+   <ItemDef>Voer de betalingsprocedure uit op de bancontact-terminal AUB. Totaalbedrag:</ItemDef>
+  </ConstantInstance>
+ </Constant>
+ <Constant>
+  <ItemName>kBtnAdd</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>645234687</PartID>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemType>0</ItemType>
+  <ItemDef></ItemDef>
+  <ItemFlags>65</ItemFlags>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>ADD</ItemDef>
+  </ConstantInstance>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>6</ItemLanguage>
+   <ItemDef>TOEVOEGEN</ItemDef>
+  </ConstantInstance>
+ </Constant>
+ <Constant>
+  <ItemName>kOpenTabSince</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>208269311</PartID>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemType>0</ItemType>
+  <ItemDef></ItemDef>
+  <ItemFlags>65</ItemFlags>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>Open tab since</ItemDef>
+  </ConstantInstance>
+  <ConstantInstance>
+   <ItemPlatform>0</ItemPlatform>
+   <ItemLanguage>6</ItemLanguage>
+   <ItemDef>Openstaande rekening sinds</ItemDef>
+  </ConstantInstance>
+ </Constant>
 </block>
 <block type="UIState" ID="0">
  <WarningPreferences>
@@ -33820,9 +34482,9 @@
    <EditorCount>1</EditorCount>
    <Editor>
     <EditorIndex>0</EditorIndex>
-    <EditorLocation>wndPOS.Controls.rctHeaderButtons</EditorLocation>
+    <EditorLocation>wndOpenBills.Controls.lbTickets.Change</EditorLocation>
     <EditorPath></EditorPath>
-    <EditingPartID>462580958</EditingPartID>
+    <EditingPartID>392820735</EditingPartID>
     <EditorPath></EditorPath>
    </Editor>
    <SelectedTab>0</SelectedTab>
